@@ -62,25 +62,25 @@ export default function Header() {
 					className="mx-10 hidden xl:flex flex-wrap sm:gap-8 gap-3 text-gray-600 uppercase text-sm"
 					style={{ letterSpacing: '0.1875rem' }}
 				>
-					<li>
+					<li className="cursor-pointer hover:underline">
 						<a to="/">Home</a>
 					</li>
-					<li>
+					<li className="cursor-pointer hover:underline">
 						<a to="/">About</a>
 					</li>
-					<li>
+					<li className="cursor-pointer hover:underline">
 						<a to="/">Services</a>
 					</li>
-					<li>
+					<li className="cursor-pointer hover:underline">
 						<a to="/">Portfolio</a>
 					</li>
-					<li>
+					<li className="cursor-pointer hover:underline">
 						<a to="/">Blog</a>
 					</li>
-					<li>
+					<li className="cursor-pointer hover:underline">
 						<a to="/">Contact</a>
 					</li>
-					<li>
+					<li className="cursor-pointer hover:underline">
 						<a to="/">Get a Quote</a>
 					</li>
 				</ul>
