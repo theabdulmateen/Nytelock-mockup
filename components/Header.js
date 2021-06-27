@@ -1,6 +1,9 @@
 import Image from 'next/image'
 import React, { useRef, useEffect } from 'react'
 
+import QuoteButton from './QuoteButton'
+import { ReactComponent as Two } from '../assets/two.svg'
+
 const isBrowser = typeof window !== 'undefined'
 
 const getCurrentPosition = () => {
@@ -81,15 +84,45 @@ export default function Header() {
 						<a to="/">Get a Quote</a>
 					</li>
 				</ul>
-				<div className="ml-auto">
-					<div>
-						<h1 className="">search</h1>
+				<div className="ml-auto flex items-center justify-center">
+					<div className="self-center md:self-start hidden lg:block">
+						<button className="flex items-center bg-[#FFCC29] transition-colors duration-300 ease-out hover:text-white hover:underline pl-8 pr-2 py-2 rounded-full text-xl font-semibold shadow-outset">
+							Get a Quote
+							<span className="float-right ml-5 bg-white !text-black rounded-full p-2.5">
+								<svg
+									xmlns="http://www.w3.org/2000/svg"
+									className="h-6 w-6"
+									fill="none"
+									viewBox="0 0 24 24"
+									stroke="currentColor"
+								>
+									<path
+										strokeLinecap="round"
+										strokeLinejoin="round"
+										strokeWidth={2}
+										d="M8 12h.01M12 12h.01M16 12h.01M21 12c0 4.418-4.03 8-9 8a9.863 9.863 0 01-4.255-.949L3 20l1.395-3.72C3.512 15.042 3 13.574 3 12c0-4.418 4.03-8 9-8s9 3.582 9 8z"
+									/>
+								</svg>
+							</span>
+						</button>
+					</div>
+					<div className="ml-10 cursor-pointer">
+						<svg
+							xmlns="http://www.w3.org/2000/svg"
+							className="h-6 w-6"
+							fill="none"
+							viewBox="0 0 24 24"
+							stroke="currentColor"
+						>
+							<path
+								strokeLinecap="round"
+								strokeLinejoin="round"
+								strokeWidth={2}
+								d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"
+							/>
+						</svg>
 					</div>
 				</div>
-				{/* <button
-            className='ml-auto xl:hidden w-6 h-6 focus:outline-none'>
-            s
-          </button> */}
 			</nav>
 		</header>
 	)
