@@ -1,16 +1,15 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-a {
-  color: inherit;
-  text-decoration: none;
-}
+@import url(normalize.css);
 
-* {
-  box-sizing: border-box;
+.highlighter::before {
+  content: '';
+  width: 7px;
+  height: 7px;
+  top: 50%;
+  left: -25px;
+  transform: translateY(-50%);
+  @apply bg-[#FFCC29] absolute rounded-lg;
 }
