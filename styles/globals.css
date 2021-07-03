@@ -22,6 +22,10 @@
   box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.3);
 }
 
+.transition-overlay {
+  transition: transform 0.25s ease-in-out, opacity 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
 .carousel-item {
   @apply rounded-lg px-4 py-10 mx-4 text-lg text-white font-bold border-[0.1em] border-sky-100 cursor-pointer;
   @apply transition-colors duration-300 ease-out overflow-visible;

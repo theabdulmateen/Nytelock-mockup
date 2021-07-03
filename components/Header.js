@@ -27,7 +27,7 @@ const useScrollEffect = ({ effect }) => {
 		}
 
 		return () => window.addEventListener('scroll', handeScroll)
-	}, [])
+	}, [effect])
 }
 
 export default function Header() {
@@ -47,10 +47,10 @@ export default function Header() {
 
 	return (
 		<header
-			className="flex fixed min-w-full top-0 z-50 h-32 sm:h-32 md:h-28 lg:h-20 xl:h-24 2xl:h-32 bg-white nav-transition"
+			className="fixed top-0 z-50 flex h-32 min-w-full bg-white sm:h-32 md:h-28 lg:h-20 xl:h-24 2xl:h-32 nav-transition"
 			ref={navRef}
 		>
-			<nav className="w-full md:px-28 sm:px-5 flex items-center text-gray-800">
+			<nav className="flex items-center w-full text-gray-800 md:px-28 sm:px-5">
 				<div className="mr-auto">
 					<div>
 						<h1 className="">
@@ -58,8 +58,9 @@ export default function Header() {
 						</h1>
 					</div>
 				</div>
+
 				<ul
-					className="mx-10 hidden xl:flex flex-wrap sm:gap-8 gap-3 text-gray-600 uppercase text-sm"
+					className="flex-wrap hidden gap-3 mx-10 text-sm text-gray-600 uppercase xl:flex sm:gap-8"
 					style={{ letterSpacing: '0.1875rem' }}
 				>
 					<li className="cursor-pointer hover:underline">
@@ -84,14 +85,15 @@ export default function Header() {
 						<a to="/">Get a Quote</a>
 					</li>
 				</ul>
-				<div className="ml-auto flex items-center justify-center">
-					<div className="self-center md:self-start hidden lg:block">
-						<button className="flex items-center bg-[#FFCC29] transition-colors duration-300 ease-out hover:text-white hover:underline pl-8 pr-2 py-2 rounded-full text-xl font-semibold shadow-outset">
+
+				<div className="flex items-center justify-center ml-auto">
+					<div className="self-center hidden md:self-start lg:block">
+						<button className="flex items-center bg-[#FFCC29] transition-colors duration-300 ease-out hover:text-white hover:underline pl-8 pr-2 py-2 rounded-full text-xl font-semibold shadow-outset hover-overlay">
 							Get a Quote
 							<span className="float-right ml-5 bg-white !text-black rounded-full p-2.5">
 								<svg
 									xmlns="http://www.w3.org/2000/svg"
-									className="h-6 w-6"
+									className="w-6 h-6"
 									fill="none"
 									viewBox="0 0 24 24"
 									stroke="currentColor"
@@ -106,10 +108,11 @@ export default function Header() {
 							</span>
 						</button>
 					</div>
+
 					<div className="ml-10 cursor-pointer">
 						<svg
 							xmlns="http://www.w3.org/2000/svg"
-							className="h-6 w-6"
+							className="w-6 h-6"
 							fill="none"
 							viewBox="0 0 24 24"
 							stroke="currentColor"

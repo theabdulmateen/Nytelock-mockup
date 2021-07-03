@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import Fade from 'react-reveal/Fade'
 import Image from 'next/image'
 import Carousel from 'react-elastic-carousel'
 
@@ -61,10 +62,10 @@ export default function Home() {
 	const [ active, setActive ] = useState(0)
 
 	return (
-		<main className="select-none subpixel-antialiased">
+		<main className="subpixel-antialiased select-none">
 			<Header />
 
-			<section className="grid place-items-center mt-20 p-10 sm:px-4 4xl:px-36">
+			<section className="grid p-10 mt-20 place-items-center sm:px-4 4xl:px-36">
 				<div className="bg-[#3D3D3D] rounded-2xl w-full py-32 px-8 sm:px-12 md:px-12 lg:px-24 xl:px-48">
 					<div className="flex flex-col xl:flex-row">
 						<div className="max-w-[600px] font-sans mr-auto">
@@ -72,7 +73,7 @@ export default function Home() {
 								What services do we offer?
 							</div>
 
-							<div className="text-4xl tracking-wider text-white font-medium mt-5">
+							<div className="mt-5 text-4xl font-medium tracking-wider text-white">
 								Stand Out From The Rest With Professional Branding
 							</div>
 						</div>
@@ -115,25 +116,25 @@ export default function Home() {
 				</div>
 			</section>
 
-			<section className="container mx-auto px-40 sm:px-4 md:px-8 xl:px-40 2xl:px-80">
-				<div className="">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-20">
+			<section className="container relative px-40 mx-auto sm:px-4 md:px-8 xl:px-40 2xl:px-80">
+				<Fade when={active === 0} exit={false}>
+					<div className="absolute grid grid-cols-1 gap-20 mb-20 lg:grid-cols-2">
 						<article className="">
-							<h1 className="text-5xl font-black mb-5 tracking-wide">Creative Design and Branding</h1>
-							<p className="text-gray-700 tracking-wider">
+							<h1 className="mb-5 text-5xl font-black tracking-wide">Creative Design and Branding</h1>
+							<p className="tracking-wider text-gray-700">
 								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
 								has been the industry standard dummy text ever since the 1500s, when an unknown printer
 								took a galley of type and scrambled it to make a type specimen book. It has survived not
 								only five centuries
 							</p>
-							<ul className="text-gray-900 font-semibold list-disc ml-10 my-5">
+							<ul className="my-5 ml-10 font-semibold text-gray-900 list-disc">
 								<li>Logos</li>
 								<li>Business Cards</li>
 								<li>Labels & packagings</li>
 								<li>Stickers</li>
 								<li>Flyers</li>
 							</ul>
-							<p className="text-gray-700 tracking-wider">
+							<p className="tracking-wider text-gray-700">
 								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
 								has been the industry standard dummy text ever since the 1500s, when an unknown printer
 								took a galley of type and scrambled it to make a type specimen book. It has survived not
@@ -146,11 +147,229 @@ export default function Home() {
 								alt="dank image"
 								width={500}
 								height={600}
-								className="rounded-2xl w-full"
+								className="w-full rounded-2xl"
 							/>
 						</div>
 					</div>
-				</div>
+				</Fade>
+
+				<Fade when={active === 1} exit={false}>
+					<div className="absolute grid grid-cols-1 gap-20 mb-20 lg:grid-cols-2">
+						<article className="">
+							<h1 className="mb-5 text-5xl font-black tracking-wide">1-on-1 Brand Consultancy</h1>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry text ever since the 1500s, when an unknown printer took a galley
+								of type and scrambled it to make a type specimen book. It has survived not only five
+								centuries
+							</p>
+							<ul className="my-5 ml-10 font-semibold text-gray-900 list-disc">
+								<li>Business Cards</li>
+								<li>Labels & packagings</li>
+								<li>Stickers</li>
+								<li>Flyers</li>
+							</ul>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+						</article>
+						<div>
+							<Image
+								src="https://picsum.photos/seed/pog/500/600"
+								alt="dank image"
+								width={500}
+								height={600}
+								className="w-full rounded-2xl"
+							/>
+						</div>
+					</div>
+				</Fade>
+
+				<Fade when={active === 2} exit={false}>
+					<div className="absolute grid grid-cols-1 gap-20 mb-20 lg:grid-cols-2">
+						<article className="">
+							<h1 className="mb-5 text-5xl font-black tracking-wide">Web Design & Development</h1>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries Lorem, ipsum. Lorem, ipsum dolor sit amet consectetur adipisicing
+								elit. Dolorem adipisci repudiandae perferendis quidem culpa sequi quam ducimus natus
+								dicta nihil.
+							</p>
+							<ul className="my-5 ml-10 font-semibold text-gray-900 list-disc">
+								<li>E commerce Websites</li>
+								<li>Standard Websites</li>
+								<li>Professional landing pages</li>
+								<li>Portfolios</li>
+								<li>Mobile App UIUX</li>
+							</ul>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+						</article>
+						<div>
+							<Image
+								src="https://picsum.photos/seed/ppPoof/500/600"
+								alt="dank image"
+								width={500}
+								height={600}
+								className="w-full rounded-2xl"
+							/>
+						</div>
+					</div>
+				</Fade>
+
+				<Fade when={active === 3} exit={false}>
+					<div className="absolute grid grid-cols-1 gap-20 mb-20 lg:grid-cols-2">
+						<article className="">
+							<h1 className="mb-5 text-5xl font-black tracking-wide">
+								Digital Marketing & Lead Generation
+							</h1>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+							<ul className="my-5 ml-10 font-semibold text-gray-900 list-disc">
+								<li>Logos</li>
+								<li>Business Cards</li>
+								<li>Labels & packagings</li>
+								<li>Stickers</li>
+								<li>Flyers</li>
+							</ul>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+						</article>
+						<div>
+							<Image
+								src="https://picsum.photos/seed/5Head/500/600"
+								alt="dank image"
+								width={500}
+								height={600}
+								className="w-full rounded-2xl"
+							/>
+						</div>
+					</div>
+				</Fade>
+
+				<Fade when={active === 4} exit={false}>
+					<div className="absolute grid grid-cols-1 gap-20 mb-20 lg:grid-cols-2">
+						<article className="">
+							<h1 className="mb-5 text-5xl font-black tracking-wide">Video Production & Editing</h1>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+							<ul className="my-5 ml-10 font-semibold text-gray-900 list-disc">
+								<li>Logos</li>
+								<li>Business Cards</li>
+								<li>Labels & packagings</li>
+								<li>Stickers</li>
+								<li>Flyers</li>
+							</ul>
+						</article>
+						<div>
+							<Image
+								src="https://picsum.photos/seed/ezclap/500/600"
+								alt="dank image"
+								width={500}
+								height={600}
+								className="w-full rounded-2xl"
+							/>
+						</div>
+					</div>
+				</Fade>
+
+				<Fade when={active === 5} exit={false}>
+					<div className="absolute grid grid-cols-1 gap-20 mb-20 lg:grid-cols-2">
+						<article className="">
+							<h1 className="mb-5 text-5xl font-black tracking-wide">Professional Photo Editing</h1>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+							<ul className="my-5 ml-10 font-semibold text-gray-900 list-disc">
+								<li>Logos</li>
+								<li>Business Cards</li>
+								<li>Labels & packagings</li>
+								<li>Stickers</li>
+								<li>Flyers</li>
+							</ul>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+						</article>
+						<div>
+							<Image
+								src="https://picsum.photos/seed/lorem/500/600"
+								alt="dank image"
+								width={500}
+								height={600}
+								className="w-full rounded-2xl"
+							/>
+						</div>
+					</div>
+				</Fade>
+
+				<Fade when={active === 6} exit={false}>
+					<div className="absolute grid grid-cols-1 gap-20 mb-20 lg:grid-cols-2">
+						<article className="">
+							<h1 className="mb-5 text-5xl font-black tracking-wide">Creative Design and Branding</h1>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+							<ul className="my-5 ml-10 font-semibold text-gray-900 list-disc">
+								<li>Logos</li>
+								<li>Business Cards</li>
+								<li>Labels & packagings</li>
+								<li>Stickers</li>
+								<li>Flyers</li>
+							</ul>
+							<p className="tracking-wider text-gray-700">
+								Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry standard dummy text ever since the 1500s, when an unknown printer
+								took a galley of type and scrambled it to make a type specimen book. It has survived not
+								only five centuries
+							</p>
+						</article>
+						<div>
+							<Image
+								src="https://source.unsplash.com/random"
+								alt="dank image"
+								width={500}
+								height={600}
+								className="w-full rounded-2xl"
+							/>
+						</div>
+					</div>
+				</Fade>
 			</section>
 		</main>
 	)
